@@ -19,7 +19,7 @@ public class MesDaoImpl implements MesDao{
 	public List<MMes> listarTodo() {
 		// TODO Auto-generated method stub
 		try {
-			List<MMes> listaMes=em.createQuery("from MMes",MMes.class).getResultList();
+			List<MMes> listaMes=em.createQuery("from MMes group by idMes,nombre order by idMes",MMes.class).getResultList();
 			return listaMes;
 		} catch (Exception e) {
 			// TODO: handle exception

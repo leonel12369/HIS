@@ -28,13 +28,13 @@ public class UbigeoController {
 	@RequestMapping(value="/cargaProvincia", method=RequestMethod.POST,  consumes={ MediaType.APPLICATION_JSON_VALUE })
 	public @ResponseBody List<String> cargaProvincia(@RequestBody Map<String, Object>  json)throws  IOException{
 		String departamento=(String)json.get("nombre");
-		System.out.println(departamento);
+		//System.out.println(departamento);
 		return ubigeoService.listarProvincia(departamento);
 	} 
 	
 	@RequestMapping(value="/cargaDistrito", method=RequestMethod.POST, consumes= {MediaType.APPLICATION_JSON_VALUE})
 	public @ResponseBody List<String> cargaDistrito(@RequestBody Map<String,Object> json){
-		System.out.println(json);
+		//System.out.println(json);
 		String departamento=(String)json.get("departamento");
 		String provincia=(String)json.get("provincia");
 		return ubigeoService.listarDistrito(departamento, provincia);

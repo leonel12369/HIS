@@ -31,4 +31,16 @@ public class UbigeoServiceImpl implements UbigeoService{
 		// TODO Auto-generated method stub
 		return ubigeoDao.listarDistrito(departamento, provincia);
 	}
+
+	@Override
+	public List<String> extraerIdUbigeo(String departamento, String provincia, String distrito) {
+		// TODO Auto-generated method stub
+		return ubigeoDao.extraerIdUbigeo(departamento, provincia, distrito);
+	}
+
+	@Override
+	public Object extraerUbigeoValidado(String departamento, String provincia) {
+		// TODO Auto-generated method stub
+		return ubigeoDao.extraerUbigeoValidado(departamento, provincia);
+	}
 }
